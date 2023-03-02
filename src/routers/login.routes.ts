@@ -3,8 +3,9 @@ import createLoginController from "../controller/login.controllers";
 import validateDataMiddleware from "../middlewares/validateData.middleware";
 import { createLoginSchema } from "../schemas/login.schemas";
 
+
 const loginRoutes: Router = Router();
 
-loginRoutes.post("", validateDataMiddleware(createLoginSchema), createLoginController)
+loginRoutes.post("", validateDataMiddleware(createLoginSchema), createLoginController);
 
 export default loginRoutes;

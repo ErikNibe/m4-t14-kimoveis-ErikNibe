@@ -5,9 +5,7 @@ const createUserSchema = z.object({
     name: z.string().max(45),
     email: z.string().email().max(45),
     admin: z.boolean().optional().default(false),
-    password: z.string().min(4).max(120).transform((pass) => {
-        return hashSync(pass, 10)
-    })
+    password: z.string().min(4).max(120)
 });
 
 const userSchema = createUserSchema.extend({
