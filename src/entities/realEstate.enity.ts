@@ -12,7 +12,7 @@ class RealEstate {
     @Column({ type: "boolean", default: false })
     sold: boolean
 
-    @Column({ type: "decimal", precision: 12, scale: 12, default: 0 })
+    @Column({ type: "decimal", precision: 12, scale: 2, default: 0 })
     value: number | string
 
     @Column({ type: "integer" })
@@ -29,7 +29,7 @@ class RealEstate {
     address: Address
 
     @ManyToOne(() => Category)
-    categories: Category[]
+    category: Category[]
 
 };
 

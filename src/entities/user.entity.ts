@@ -21,13 +21,13 @@ class User {
     password: string
 
     @CreateDateColumn()
-    createdAt: string
+    createdAt: Date
 
     @UpdateDateColumn()
-    updatedAt: string
+    updatedAt: Date
 
     @DeleteDateColumn()
-    deletedAt: string
+    deletedAt: Date
 
     @BeforeInsert()
     @BeforeUpdate()
