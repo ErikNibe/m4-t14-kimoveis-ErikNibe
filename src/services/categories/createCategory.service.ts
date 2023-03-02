@@ -14,7 +14,7 @@ const createCategoryService = async (payload: iCreateCategory): Promise<iCategor
         name: payload.name
     });
 
-    if (foundCategory) throw new AppError("Category already exists.", 400);
+    if (foundCategory) throw new AppError("Category already exists", 409);
 
     const category = categoryRepository.create(payload);
     await categoryRepository.save(category);

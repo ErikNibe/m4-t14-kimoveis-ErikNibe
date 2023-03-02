@@ -4,6 +4,7 @@ import User from "../../entities/user.entity";
 import { iListUsers } from "../../interfaces/users.interfaces";
 import { listUsersSchema } from "../../schemas/users.schemas";
 
+
 const listUsersService = async (): Promise<iListUsers> => {
 
     const userRepository: Repository<User> = AppDataSource.getRepository(User);

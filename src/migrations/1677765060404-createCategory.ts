@@ -1,5 +1,6 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
+
 export class createCategory1677765060404 implements MigrationInterface {
     name = 'createCategory1677765060404'
 

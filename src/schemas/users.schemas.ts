@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { hashSync } from "bcryptjs";
+
 
 const createUserSchema = z.object({
     name: z.string().max(45),

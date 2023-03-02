@@ -4,6 +4,7 @@ import deleteUserService from "../services/users/deleteUser.service";
 import listUsersService from "../services/users/listUsers.service";
 import updateUserService from "../services/users/updateUser.service";
 
+
 const createUserController = async (req: Request, res: Response): Promise<Response> => {
 
     const user = await createUserService(req.body);

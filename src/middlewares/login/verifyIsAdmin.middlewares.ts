@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { AppError } from "../../errors";
 
+
 const verifyIsAdminMiddleware = (req: Request, res: Response, next: NextFunction): Response | void => {
 
     const isAdmin = req.user.admin;

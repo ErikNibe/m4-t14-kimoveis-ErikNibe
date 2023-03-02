@@ -7,6 +7,7 @@ import { iCreateLogin } from "../../interfaces/login.interfaces";
 import jwt from "jsonwebtoken";
 import "dotenv/config";
 
+
 const createLoginService = async (payload: iCreateLogin): Promise<string> => {
 
     const userRepository: Repository<User> = AppDataSource.getRepository(User);

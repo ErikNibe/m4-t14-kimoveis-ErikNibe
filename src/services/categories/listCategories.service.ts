@@ -4,6 +4,7 @@ import { Category } from "../../entities";
 import { iListCategories } from "../../interfaces/categories.interfaces";
 import { listCategoriesSchema } from "../../schemas/categories.schemas";
 
+
 const listCategoriesService = async (): Promise<iListCategories> => {
 
     const categoryRepository: Repository<Category> = AppDataSource.getRepository(Category);

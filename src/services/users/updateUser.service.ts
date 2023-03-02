@@ -5,6 +5,7 @@ import { AppError } from "../../errors";
 import { iUpdateUser, iUser } from "../../interfaces/users.interfaces";
 import { userSchema } from "../../schemas/users.schemas";
 
+
 const updateUserService = async (payload: iUpdateUser, admin: boolean, userIdParam: number, userId: number): Promise<iUser> => {
 
     const userRepository: Repository<User> = AppDataSource.getRepository(User);
