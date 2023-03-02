@@ -16,7 +16,7 @@ const verifyEmailExistsMiddleware = async (req: Request, res: Response, next: Ne
 
     if (user) {
 
-        throw new AppError("Email already exists.", 400);
+        throw new AppError("Email already exists", 409);
 
     };
 

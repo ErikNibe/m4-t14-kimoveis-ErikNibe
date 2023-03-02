@@ -12,7 +12,7 @@ const verifyUserExistsMiddleware = async (req: Request, res: Response, next: Nex
         id: parseInt(req.params.id)
     });
 
-    if (!foundUser) throw new AppError("User not found.", 404);
+    if (!foundUser) throw new AppError("User not found", 404);
 
     return next();
 };

@@ -9,7 +9,10 @@ const categorySchema = createCategorySchema.extend({
     id: z.number()
 });
 
+const listCategoriesSchema = categorySchema.array();
+
 export {
     createCategorySchema,
-    categorySchema
+    categorySchema,
+    listCategoriesSchema
 };

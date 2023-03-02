@@ -19,7 +19,7 @@ const listUsersSchema = userSchema.array();
 
 const updateUserSchema = createUserSchema.omit({admin: true});
 
-const updateUserVerificationSchema = createUserSchema.partial();
+const updateUserVerificationSchema = updateUserSchema.partial();
 
 export {
     createUserSchema,

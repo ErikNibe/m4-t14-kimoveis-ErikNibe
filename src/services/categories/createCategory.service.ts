@@ -2,11 +2,11 @@ import { Repository } from "typeorm";
 import { AppDataSource } from "../../data-source";
 import { Category } from "../../entities";
 import { AppError } from "../../errors";
-import { iCreateCategory } from "../../interfaces/categories.interfaces";
+import { iCategory, iCreateCategory } from "../../interfaces/categories.interfaces";
 import { categorySchema } from "../../schemas/categories.schemas";
 
 
-const createCategoryService = async (payload: iCreateCategory): Promise<Category> => {
+const createCategoryService = async (payload: iCreateCategory): Promise<iCategory> => {
 
     const categoryRepository: Repository<Category> = AppDataSource.getRepository(Category);
 

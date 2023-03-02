@@ -13,7 +13,7 @@ const updateUserService = async (payload: iUpdateUser, admin: boolean, userIdPar
         id: userIdParam
     });
 
-    if (!admin && userIdParam !== userId) throw new AppError("Insufficient permission.", 403);
+    if (!admin && userIdParam !== userId) throw new AppError("Insufficient permission", 403);
 
     const user = userRepository.create({
         ...foundUser,
