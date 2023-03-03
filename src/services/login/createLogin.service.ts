@@ -16,11 +16,11 @@ const createLoginService = async (payload: iCreateLogin): Promise<string> => {
         email: payload.email
     });
 
-    if (!foundUser) throw new AppError("Email or password incorrect.", 401);
+    if (!foundUser) throw new AppError("Invalid credentials", 401);
 
     const pwdMatches = await compare(payload.password, foundUser.password);
 
-    if (!pwdMatches) throw new AppError("Email or password incorrect.", 401);
+    if (!pwdMatches) throw new AppError("Invalid credentials", 401);
 
     const token: string = jwt.sign(
         {

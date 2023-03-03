@@ -3,7 +3,6 @@ import { AppDataSource } from "../../data-source";
 import { Address, Category, RealEstate } from "../../entities";
 import { AppError } from "../../errors";
 import { iCreateRealEstate } from "../../interfaces/realEstate.interfaces";
-import { realEstateSchema } from "../../schemas/realEstate.schemas";
 
 
 const createRealEstateService = async (payload: iCreateRealEstate) => {
@@ -43,9 +42,7 @@ const createRealEstateService = async (payload: iCreateRealEstate) => {
     });
     await realEstateRepository.save(realEstate);
 
-    const newRealEstate = realEstateSchema.parse(realEstate);
-
-    return newRealEstate;
+    return realEstate;
 
 };
 

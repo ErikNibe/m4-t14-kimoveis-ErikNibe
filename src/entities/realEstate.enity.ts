@@ -1,6 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToOne, JoinColumn, OneToMany, ManyToOne } from "typeorm";
 import Address from "./address.entity";
 import Category from "./category.entity";
+import Schedule from "./schedule.entity";
 
 
 @Entity("real_estate")
@@ -30,6 +31,9 @@ class RealEstate {
 
     @ManyToOne(() => Category)
     category: Category
+
+    @OneToMany(() => Schedule, schedule => schedule.realEstate)
+    schedules: Schedule
 
 };
 
