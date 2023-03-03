@@ -5,6 +5,7 @@ import verifyTokenIsValidMiddleware from "../middlewares/login/verifyTokenIsVali
 import validateDataMiddleware from "../middlewares/validateData.middleware";
 import { createRealEstateSchema } from "../schemas/realEstate.schemas"; 
 
+
 const realEstateRouter: Router = Router();
 
 realEstateRouter.post("", verifyTokenIsValidMiddleware, verifyIsAdminMiddleware, validateDataMiddleware(createRealEstateSchema), createRealEstateController);

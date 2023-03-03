@@ -4,6 +4,7 @@ import { AppDataSource } from "../../data-source";
 import { User } from "../../entities";
 import { AppError } from "../../errors";
 
+
 const verifyUserExistsMiddleware = async (req: Request, res: Response, next: NextFunction): Promise<Response | void> => {
 
     const userRepository: Repository<User> = AppDataSource.getRepository(User);
@@ -15,6 +16,7 @@ const verifyUserExistsMiddleware = async (req: Request, res: Response, next: Nex
     if (!foundUser) throw new AppError("User not found", 404);
 
     return next();
+    
 };
 
 export default verifyUserExistsMiddleware;
